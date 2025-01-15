@@ -566,7 +566,7 @@ input:checked+.slider:before {
     }
 
     .left-column-pro-img{
-        border-radius: 100%;
+        border-radius: 200px;
     }
 
     .right-column-name{
