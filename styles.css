@@ -586,6 +586,10 @@ input:checked+.slider:before {
         padding: 0 0 1rem 0;
     }
 
+    .profile-img-container{
+        padding-top: 20px;
+    }
+
     .header {
         padding: 1rem;
     }
