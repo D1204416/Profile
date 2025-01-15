@@ -1,0 +1,588 @@
+/* Variables */
+:root {
+    --primary-color: #20171e;
+    --secondary-color: #666;
+    --background-color: #fbfbfb;
+    --accent-color: #9FD2E0;
+    --accent-color-light: #cdf1ea;
+    --hover-color: #4d4d4d;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --text-color: #333;
+    --spacing-unit: 1rem;
+    --border-radius-top: 200px 200px 0 0;
+    --transition-speed: 0.3s;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微軟正黑體", Arial, sans-serif;
+}
+
+body {
+    /* background-color: var(--background-color); */
+    line-height: 1.6;
+    color: var(--text-color);
+    padding: 20px;
+    background: url('img/bg02.jpg');
+    background-size: cover; 
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 對於可能突變的元素也添加過渡 */
+.resume-container,
+.left-column,
+.right-column{
+    transition: background-color 0.3s ease;
+}
+
+/* Layout */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+.resume-container {
+    background: rgba(255, 255, 255, 0);
+    /* border-radius: var(--border-radius-top); */
+    overflow: hidden;
+    display: flex;
+
+}
+
+.left-column {
+    width: 30%;
+    background: linear-gradient(to top, #9fd2e04b, #cdf1eaca);
+    padding: 2rem;
+    margin-right: 20px;
+}
+
+.left-column-pro-img {
+    background: linear-gradient(to bottom, #9fd2e04b, #cdf1eaca);
+    border-radius: var(--border-radius-top);
+}
+
+.left-column-pro-info {
+    border-radius:0 0 200px 200px ;
+}
+
+.right-column {
+    width: 70%;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.697);
+    border-radius: 20px 20px 20px 20px ;
+
+    
+}
+
+.right-column-name{
+    padding: 2rem 0;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Profile Image */
+.profile-img-container{
+    padding-top: 30px;
+}
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto 2rem;
+    display: flex;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 0 10px var(--shadow-color);
+    transition: transform var(--transition-speed) ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* Bootstrap carousel img border radius */
+.portfolio-item-carousel-img{
+    border-radius: 10px !important;
+}
+
+/* Header */
+.header {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 2rem ;
+    border-radius: var(--border-radius);
+    color: white;
+    margin-bottom: 1.5rem;
+    margin-top: 50px;
+}
+
+.header-text {
+    flex-grow: 1;
+}
+
+.name {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.title {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    color: white;
+}
+
+/* Navigation Buttons */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.about-me, .nav-btn {
+    background: var(--accent-color);
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.about-me:hover, .nav-btn:hover {
+    background: var(--hover-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+
+/* Language Switch */
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* 確保所有元素垂直置中對齊 */
+    gap: 1rem; /* 統一間距 */
+}
+
+.language-btn {
+    background: var(--accent-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    font-size: 0.9rem;
+}
+
+.language-btn:hover,
+.language-btn.active {
+    background: var(--hover-color);
+    color: white;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title-left,
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 0;
+    width: 150px;
+    height: 4px;
+    background-color: #B9C0D4;
+}
+
+.section-title-left::after{
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 0;
+    width: 140px;
+    height: 4px;
+    
+}
+
+.section-title-left-skill::after{
+    background-color: #7c7c7c00;
+}
+
+/* Contact Info */
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.contact-info a:hover {
+    color: var(--accent-color);
+}
+
+/* Bootstrap info padding */
+.contact-info-padding{
+    padding-left: 0 !important;
+}
+
+/* Skills */
+.skills-category {
+    margin-bottom: 1.5rem;
+}
+
+.skills-category:last-child {
+    margin-bottom: 0;
+}
+
+.skills-category-title {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.skills-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.skills-list li::before {
+    content: '●';
+    position: absolute;
+    left: -1rem;
+    color: var(--primary-color);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    margin-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 5px;
+    height: 100%;
+    width: 2px;
+    background-color: var(--secondary-color);
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 1.5rem;
+    transition: transform var(--transition-speed) ease;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:hover {
+    transform: translateX(25px);
+}
+
+.timeline-item::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #4769d0;
+    border: 2px solid #4769d0;
+    border-radius: 50%;
+    position: absolute;
+    left: -9px;
+    top: 4px;
+}
+
+.company-date{
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-date {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    padding-right: 0.5rem;
+}
+
+.company, .school {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.position {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.duties {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: var(--text-color);
+}
+
+.duties li {
+    margin-bottom: 0.3rem;
+}
+
+/* Portfolio */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform var(--transition-speed) ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-item h3 {
+    padding: 1rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+
+/* 日夜版切換按鈕 */
+.theme-switch-wrapper {
+    /* display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 70px; */
+
+    display: flex;
+    align-items: center;
+}
+
+.theme-switch {
+    /* display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 80px; */
+
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+    margin: 0; /* 移除可能的預設 margin */
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #4769d0;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.theme-switch-wrapper em {
+    /* margin-left: 10px;
+    font-size: 1rem; */
+
+    margin-left: 10px;
+    font-size: 0.9rem; /* 與語言按鈕字體大小保持一致 */
+    white-space: nowrap; /* 防止文字換行 */
+    color: rgb(255, 253, 253);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    body {
+        padding: 10px;
+    }
+    .header{
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .button-group {
+        justify-content: center;
+    }
+
+    .portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .header{
+        margin-top: 0px;
+    }
+
+    .language-switch {
+        top: 10px;
+        right: 10px;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+        page-break-inside: avoid;
+    }
+
+    .language-switch,
+    .about-me,
+    .nav-btn {
+        display: none;
+    }
+
+    .timeline-item:hover {
+        transform: none;
+    }
+
+    .portfolio-item:hover {
+        transform: none;
+    }
+}

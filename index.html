@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="陳敬家的個人履歷 - 前端工程師">
+    <title>陳敬家 - 前端工程師</title>
+    <!-- <link rel="stylesheet" href="styles.css" id="light-theme"> -->
+
+    <!-- 預先載入兩個主題的 CSS -->
+    <link rel="stylesheet" href="styles.css" id="light-theme">
+    <link rel="preload" rel="stylesheet" href="styles2.css" as="style" id="dark-theme" disabled>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="translations.js" defer></script>
+    <script src="main.js" defer></script>
+
+
+</head>
+
+<body>
+    <div class="language-switch">
+        <button class="language-btn" data-lang="zh">中文</button>
+        <button class="language-btn" data-lang="en">English</button>
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+            </label>
+            <em><i class="bi bi-moon-fill"></i></em>
+
+        </div>
+    </div>
+
+    <main>
+        <section class="resume-container">
+            <div class="left-column left-column-pro-img">
+                <div class="profile-img-container">
+                    <img src="img/S0.jpg" alt="陳敬家個人照片" class="profile-img" loading="lazy">
+                </div>
+
+            </div>
+            <div class="right-column right-column-name">
+                <div class="header">
+                    <div class="header-text">
+                        <div style="display: flex;">
+                            <div style="flex: 3;">
+                                <h1 class="name" style="white-space:nowrap; margin-right: 10px;">陳敬家</h1>
+                                <div class="title">前端工程師</div>
+                            </div>
+                            <div style="flex: 1;">
+
+                                <div>
+                                    <img src="img/rocket.png" alt="" style="width: 30%;height: auto;">
+                                    <img src="img/planet.png" alt="" style="width: 60%;height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="button-group">
+                    <button class="about-me nav-btn " data-bs-toggle="modal" data-bs-target="#about-me">關於我</button>
+                    <button class="about-me nav-btn" data-bs-toggle="modal" data-bs-target="#work">求職動機</button>
+                    <button class="about-me nav-btn" data-bs-toggle="modal" data-bs-target="#advantage">我的優勢</button>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div class="modal fade" id="about-me" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">關於我</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p> 我是一位從醫療領域轉職至資訊工程的開發者，擁有逢甲大學資訊工程學士後學位（2024-2025）以及國立臺北護理健康大學護理系學士學位（2010-2014）。
+                            我的職業生涯始於醫療領域，曾在衛生福利部雙和醫院擔任神經內科病房護理師，並在中山醫學大學附設醫院兒童部擔任研究助理。這些經驗培養了我細心、耐心以及解決問題的能力，
+                            同時也讓我意識到科技對於提升醫療服務的重要性。
+                        </p>
+                        <p> 在過去幾年中，我對促進醫療服務的數位轉型產生了濃厚的興趣。這種興趣驅使我進一步學習資訊工程，系統式掌握軟體開發生命週期（SDLC），從瀑布模型到敏捷模型，深入理解它們的流程與應用場景。在實際專案中，我參與了開發的各個階段，學習並落實每個階段的關鍵步驟，包括需求分析、設計、實作、測試與部署。在開發過程中，我全面學習了前端與後端技術，並掌握
+                            Vue.js 和 SpringBoot 等開發工具，資料庫 (MariaDB)
+                            設計與管理能力，以及單元測試（JUnit）、整合測試及前端的功能測試，能有效提升系統的穩定性與可靠性。並使用 Git 進行版本控制，確保團隊協作的效率與可靠性。
+                        </p>
+
+                        <p> 除了程式開發技能，我也積極學習 UI/UX 設計，深刻理解使用者體驗在軟體開發中的重要性。為了提升這方面的能力，我在學程之外自學了 Figma、Whimsical
+                            等設計工具，並應用於專案中進行介面設計與使用者流程規劃。力求讓產品在視覺和使用上直觀，為使用者提供高品質的操作體驗。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="work" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">求職動機</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>我是一位熱愛前端開發的工程師，擁有豐富的前端開發經驗，熟悉 HTML、CSS、JavaScript、Vue.js 等技術，並且具備 UI/UX
+                            設計能力。我喜歡學習新技術，並且樂於與團隊合作，共同完成專案。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="advantage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">我的優勢</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>我是一位熱愛前端開發的工程師，擁有豐富的前端開發經驗，熟悉 HTML、CSS、JavaScript、Vue.js 等技術，並且具備 UI/UX
+                            設計能力。我喜歡學習新技術，並且樂於與團隊合作，共同完成專案。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="resume-container main-content">
+            <div class="left-column left-column-pro-info">
+                <section class="section contact-section">
+                    <h2 class="section-title-left">聯絡資訊</h2>
+                    <ul class="contact-info contact-info-padding">
+                        <li class="phone"><i class="bi bi-telephone-fill"></i> 0973-266-815</li>
+                        <li class="email"><i class="bi bi-envelope-fill"></i> happy34she@gmail.com</li>
+                        <li class="location"></i>台中市</li>
+                        <li class="github">
+                            <a href="https://github.com/YourGitHub" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i> GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="section skills-section">
+                    <h2 class="section-title-left section-title-left-skill">技能</h2>
+                    <div class="skills-category">
+                        <h5 class="skills-category-title">UI/UX 設計</h5>
+                        <ul class="skills-list">
+                            <li>Figma</li>
+                            <li>Whimsical</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h5 class="skills-category-title">前端</h5>
+                        <ul class="skills-list">
+                            <li>HTML5/CSS3</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>Vue</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h5 class="skills-category-title">後端</h5>
+                        <ul class="skills-list">
+                            <li>Java</li>
+                            <li>SpringBoot</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h5 class="skills-category-title">資料庫</h5>
+                        <ul class="skills-list">
+                            <li>MariaDB</li>
+                        </ul>
+                    </div>
+                    <div class="skills-category">
+                        <h5 class="skills-category-title">版本控制</h5>
+                        <ul class="skills-list">
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-column">
+                <section class="section education-section">
+                    <h2 class="section-title">學習經歷</h2>
+                    <div class="timeline education-timeline">
+                        <div class="timeline-item">
+                            <div class="school">逢甲大學資訊工程學系學士後學位</div>
+                            <div class="timeline-date">2024.02 – 2025.01</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="school">國立臺北護理健康大學護理系學位</div>
+                            <div class="timeline-date">2010.09 – 2014.06</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section experience-section">
+                    <h2 class="section-title">工作經歷</h2>
+                    <div class="timeline experience-timeline">
+
+
+                        <div class="timeline-item">
+
+                            <div class="company-date">
+                                <div class="company">中山醫學大學附設醫院</div>
+                                <div class="timeline-date">2023 – 2024</div>
+                            </div>
+
+                            <div class="position">兒童部 研究助理</div>
+                            <ul class="duties">
+                                <li>負責臨床數據收集與分析，並協助建立數據平台，提高醫療研究效率。</li>
+                                <li>管理患者的治療歷史檔案，協助患者追蹤治療進展及藥物使用情況。</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+
+                            <div class="company-date">
+                                <div class="company">送子鳥生殖中心</div>
+                                <div class="timeline-date">2016 - 2022</div>
+                            </div>
+
+                            <div class="position">教育長</div>
+                            <ul class="duties">
+                                <li>負責設計並推動教育方案，協調各項資源</li>
+                                <li>客戶體驗設計</li>
+                                <li>擬定職員考核制度</li>
+                                <li>跨部門合作開發醫療衛教資訊系統</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+
+                            <div class="company-date">
+                                <div class="company">衛生福利部雙和醫院</div>
+                                <div class="timeline-date">2014- 2015</div>
+                            </div>
+
+                            <div class="position">神經內科病房 護理師</div>
+                            <ul class="duties">
+                                <li>提供病患護理服務，與醫療團隊協作治療計畫。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section portfolio-section">
+                    <h2 class="section-title">作品集</h2>
+                    <div class="portfolio">
+                        <div class="portfolio-item portfolio-item-carousel-img">
+                            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                        <img src="img/s01.png" class="d-block w-100" alt="作品1">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>First slide label</h5>
+                                            <p>Some representative placeholder content for the first slide.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="img/s01.png" class="d-block w-100" alt="作品2">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Second slide label</h5>
+                                            <p>Some representative placeholder content for the second slide.</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/s01.png" class="d-block w-100" alt="作品3">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Third slide label</h5>
+                                            <p>Some representative placeholder content for the third slide.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
