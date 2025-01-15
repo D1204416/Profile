@@ -513,6 +513,7 @@ input:checked + .slider:before {
     .right-column {
         width: 100%;
         border-radius: 10px;
+        margin-bottom: 20px;
     }
 
     .profile-img {
@@ -539,8 +540,17 @@ input:checked + .slider:before {
     }
 
     .language-switch {
-        top: 10px;
-        right: 10px;
+        position: static;
+        margin: 10px 25px 20px 25px ;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .language-btn {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
     }
 
     .header {
@@ -557,6 +567,14 @@ input:checked + .slider:before {
 
     .section-title {
         font-size: 1.3rem;
+    }
+
+    .timeline {
+        margin-left: 0;
+    }
+
+    .duties {
+        margin-left: 0;
     }
 }
 
