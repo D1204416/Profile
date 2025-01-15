@@ -565,6 +565,13 @@ input:checked+.slider:before {
         text-align: center;
     }
 
+    .left-column-pro-img{
+        border-radius: 100%;
+    }
+
+    .right-column-name{
+        padding: 0 0 1rem 0;
+    }
 
     .header {
         padding: 1rem;
