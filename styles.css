@@ -565,8 +565,21 @@ input:checked+.slider:before {
         text-align: center;
     }
 
+    .left-column{
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .left-column-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .left-column-pro-img{
-        border-radius: 200px;
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
     }
 
     .right-column-name{
