@@ -141,6 +141,11 @@ main {
     margin-right: 2rem;
 }
 
+.indented-text {
+    text-indent: 2em; /* 首行縮排 */
+}
+
+
 .about-me,
 .nav-btn {
     background: var(--accent-color);
