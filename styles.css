@@ -136,7 +136,7 @@ main {
 .button-group {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: flex-end;
     margin-right: 2rem;
 }
@@ -539,12 +539,14 @@ input:checked+.slider:before {
 
     .button-group {
         justify-content: center;
+        margin-right: 0;
     }
 
     .portfolio {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
+
 
 @media (max-width: 480px) {
     .header {
@@ -592,6 +594,10 @@ input:checked+.slider:before {
 
     .profile-img-container{
         padding-top: 20px;
+    }
+
+    .about-me, .nav-btn {
+        padding: 0.3rem 0.5rem;
     }
 
     .header {
