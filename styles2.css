@@ -166,7 +166,7 @@ main {
 .language-switch {
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 40px;
     z-index: 1000;
     display: flex;
     align-items: center; /* 確保所有元素垂直置中對齊 */
