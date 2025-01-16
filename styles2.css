@@ -634,3 +634,14 @@ input:checked + .slider:before {
         transform: none;
     }
 }
+
+/* 只針對Safari 的樣式 */
+@media not all and (min-resolution: 0.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        a {
+            color: black; /* 特定於 Safari 的樣式 */
+            text-decoration: none;
+        }
+    }
+}
+
