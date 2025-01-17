@@ -489,6 +489,10 @@ input:checked+.slider:before {
     /* 防止文字換行 */
 }
 
+.advantage-title{
+    color: #4769d0;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {

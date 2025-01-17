@@ -477,6 +477,10 @@ input:checked + .slider:before {
     color: rgb(255, 253, 253);
 }
 
+.advantage-title{
+    color: #4769d0;
+}
+
 
 /* Animations */
 @keyframes fadeIn {
