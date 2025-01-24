@@ -1,7 +1,7 @@
 const translations = {
     zh: {
         name: "陳敬家 Jocelyn",
-        title: "前端工程師",
+        title: "醫療 x 資訊",
         about: "關於我",
         motivation: "求職動機",
         advantages: "我的優勢",
@@ -57,7 +57,7 @@ const translations = {
     },
     en: {
         name: "Jocelyn Chen",
-        title: "Frontend Engineer",
+        title: "Medical & Information",
         about: "About Me",
         motivation: "Career Goals",
         advantages: "Strengths",
