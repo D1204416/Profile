@@ -13,7 +13,8 @@ const translations = {
         location: "台中市",
         skillCategories: {
             uiux: "UI/UX 設計",
-            frontend: "前端",
+            programming: "程式設計",
+            frontend: "前端技術",
             backend: "後端",
             database: "資料庫",
             versionControl: "版本控制"
@@ -29,7 +30,7 @@ const translations = {
         exp1: {
             date: "2023 – 2024",
             company: "中山醫學大學附設醫院",
-            position: "兒童部 研究助理",
+            position: "兒童部 研究助理 職務代理",
             duties: [
                 "負責臨床數據收集與分析，並協助建立數據平台，提高醫療研究效率。",
                 "管理患者的治療歷史檔案，協助患者追蹤治療進展及藥物使用情況。"
@@ -69,6 +70,7 @@ const translations = {
         location: "Taichung City",
         skillCategories: {
             uiux: "UI/UX Design",
+            programming: "Programming",
             frontend: "Frontend",
             backend: "Backend",
             database: "Database",
