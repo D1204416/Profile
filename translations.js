@@ -39,7 +39,7 @@ const translations = {
         exp2: {
             date: "2016 - 2022",
             company: "送子鳥生殖中心",
-            position: "教育長",
+            position: "客戶成功中心主管",
             duties: [
                 "負責設計並推動教育方案，協調各項資源",
                 "客戶體驗設計",
@@ -96,7 +96,7 @@ const translations = {
         exp2: {
             date: "2016 - 2022",
             company: "Stork Fertility Center",
-            position: "Education Director",
+            position: "Customer Success Leader",
             duties: [
                 "Design and implement educational programs, coordinate resources",
                 "Customer experience design",
