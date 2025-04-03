@@ -33,7 +33,9 @@ const translations = {
             position: "兒童部 研究助理 職務代理",
             duties: [
                 "負責臨床數據收集與分析，並協助建立數據平台，提高醫療研究效率。",
-                "管理患者的治療歷史檔案，協助患者追蹤治療進展及藥物使用情況。"
+                "管理患者的治療歷史檔案，協助患者追蹤治療進展及藥物使用情況。",
+                "血友病患者個案管理。",
+                "血友病患者常規治療 ( 靜脈注射、肌肉注射、抽血等...... )。"
             ]
         },
         exp2: {
@@ -90,7 +92,9 @@ const translations = {
             position: "Research Assistant, Pediatrics Department",
             duties: [
                 "Responsible for clinical data collection and analysis, helping establish data platforms to improve medical research efficiency.",
-                "Manage patient treatment history files and assist in tracking treatment progress and medication usage."
+                "Manage patient treatment history files and assist in tracking treatment progress and medication usage.",
+                "Hemophilia patient case management.",
+                "Routine treatment for hemophilia patients (IV injection, intramuscular injection, blood draws, etc.)."
             ]
         },
         exp2: {
