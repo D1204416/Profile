@@ -38,7 +38,7 @@ const translations = {
             ]
         },
         exp2: {
-            date: "2016 - 2022",
+            date: "2016 – 2022",
             company: "送子鳥生殖中心",
             position: "客戶成功中心主管",
             duties: [
@@ -49,7 +49,7 @@ const translations = {
             ]
         },
         exp3: {
-            date: "2014- 2015",
+            date: "2014 – 2015",
             company: "衛生福利部雙和醫院",
             position: "神經內科病房 護理師",
             duties: [
@@ -96,7 +96,7 @@ const translations = {
             ]
         },
         exp2: {
-            date: "2016 - 2022",
+            date: "2016 – 2022",
             company: "Stork Fertility Center",
             position: "Customer Success Leader",
             duties: [
@@ -107,7 +107,7 @@ const translations = {
             ]
         },
         exp3: {
-            date: "2014 - 2015",
+            date: "2014 – 2015",
             company: "Shuang Ho Hospital, Ministry of Health and Welfare",
             position: "Registered Nurse, Neurology Ward",
             duties: [
