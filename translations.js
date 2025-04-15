@@ -30,7 +30,7 @@ const translations = {
         exp1: {
             date: "2023 – 2024",
             company: "中山醫學大學附設醫院",
-            position: "兒童部 血液病中心 個管師職務代理",
+            position: "兒童部 血液病中心 研究助理、個管師職務代理",
             duties: [
                 "負責臨床數據收集與分析，並協助建立數據平台，提高醫療研究效率。",
                 "血友病患者個案管理，追蹤治療進展及藥物使用情況。",
@@ -40,7 +40,7 @@ const translations = {
         exp2: {
             date: "2016 – 2022",
             company: "送子鳥生殖中心",
-            position: "客戶成功中心主管",
+            position: "客戶成功中心主管、教育主管",
             duties: [
                 "負責設計並推動教育方案，協調各項資源",
                 "客戶體驗設計",
@@ -88,7 +88,7 @@ const translations = {
         exp1: {
             date: "2023 – 2024",
             company: "Chung Shan Medical University Hospital",
-            position: "Case manager, Pediatrics Department",
+            position: "Hemophilia Comprehensive Treatment Center Research Assistant、Case manager, Pediatrics Department",
             duties: [
                 "Responsible for clinical data collection and analysis, helping establish data platforms to improve medical research efficiency.",
                 "Hemophilia patient case management and tracking treatment progress and medication usage.",
@@ -98,7 +98,7 @@ const translations = {
         exp2: {
             date: "2016 – 2022",
             company: "Stork Fertility Center",
-            position: "Customer Success Leader",
+            position: "Customer Success Leader、Chief Learning Officer-CLO",
             duties: [
                 "Design and implement educational programs, coordinate resources",
                 "Customer experience design",
