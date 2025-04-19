@@ -21,7 +21,7 @@ const translations = {
         },
         education1: {
             date: "2024.02 – 2025.01",
-            school: "逢甲大學資訊工程學系學士後學位"
+            school: "逢甲大學學士後資訊工程學系學士學位"
         },
         education2: {
             date: "2010.09 – 2014.06",
