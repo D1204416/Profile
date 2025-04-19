@@ -25,7 +25,7 @@ const translations = {
         },
         education2: {
             date: "2010.09 – 2014.06",
-            school: "國立臺北護理健康大學護理系學位"
+            school: "國立臺北護理健康大學護理系學士學位"
         },
         exp1: {
             date: "2023 – 2024",
