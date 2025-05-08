@@ -238,6 +238,10 @@ main {
     background-color: #8EBBDE;
 }
 
+.section-title-left-license::after {
+    background-color: #588ddc;
+}
+
 /* Contact Info */
 .contact-info {
     list-style: none;
