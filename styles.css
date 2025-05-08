@@ -234,13 +234,15 @@ main {
 
 }
 
-.section-title-left-skill::after {
-    background-color: #8EBBDE;
+.section-title-left-license::after {
+    background-color: #90bcde;
 }
 
-.section-title-left-license::after {
-    background-color: #588ddc;
+.section-title-left-skill::after {
+    background-color: #84b2de;
 }
+
+
 
 /* Contact Info */
 .contact-info {
