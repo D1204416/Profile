@@ -1,7 +1,7 @@
 const translations = {
     zh: {
         name: "陳敬家 Jocelyn",
-        title: "醫療 x 資訊",
+        title: "醫療照護 x 資訊工程",
         about: "關於我",
         motivation: "跨領域動機",
         advantages: "我的優勢",
@@ -41,7 +41,7 @@ const translations = {
             company: "中山醫學大學附設醫院",
             position: "兒童部 血液病中心 研究助理、個管師職務代理",
             duties: [
-                "負責臨床數據收集與分析，並協助建立數據平台，提高醫療研究效率。",
+                "臨床數據彙整，建立數據平台，提高醫療研究與個案管理效率。",
                 "血友病患者個案管理，追蹤治療進展及藥物使用情況。",
                 "血友病患者常規治療 ( IV、IM、draw blood...... )。"
             ]
@@ -68,7 +68,7 @@ const translations = {
     },
     en: {
         name: "Jocelyn Chen",
-        title: "Medical & Information",
+        title: "Healthcare & Information Engineering",
         about: "About Me",
         motivation: "Interdisciplinary",
         advantages: "Strengths",
