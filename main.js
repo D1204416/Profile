@@ -95,6 +95,9 @@ function changeLang(lang) {
 
     // 更新聯絡資訊
     updateContactInfo(t);
+
+    // 更新證照資訊
+    updateCertificates(t); 
 }
 
 function updateSectionTitles(t) {
@@ -170,6 +173,21 @@ function updateContactInfo(t) {
         locationElement.innerHTML = `<i class="bi bi-geo-fill"></i> ${t.location}`;
     }
 }
+
+function updateCertificates(t) {
+    // 更新標題
+    const certTitle = document.querySelector('.section-title-left-license');
+    if (certTitle) certTitle.textContent = t.certificatesTitle;
+
+    // 更新證照列表
+    const certListItems = document.querySelectorAll('.certificate-list li');
+    t.certificates.forEach((cert, index) => {
+        if (certListItems[index]) {
+            certListItems[index].textContent = cert;
+        }
+    });
+}
+
 
 
 // 樣式切換功能

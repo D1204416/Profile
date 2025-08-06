@@ -6,11 +6,20 @@ const translations = {
         motivation: "跨領域動機",
         advantages: "我的優勢",
         contact: "聯絡資訊",
+        certificatesTitle: "專業證照",
         skills: "技能",
         education: "學習經歷",
         experience: "工作經歷",
         portfolio: "作品集",
         location: "台中市",
+
+        certificates: [
+            "醫療資訊管理師",
+            "初階資訊護理師",
+            "高考護理師",
+            "RTC iOS APP開發"
+        ],
+
         skillCategories: {
             uiux: "UI/UX 設計",
             programming: "程式設計",
@@ -64,11 +73,18 @@ const translations = {
         motivation: "Interdisciplinary",
         advantages: "Strengths",
         contact: "Contact Info",
+        certificatesTitle: "Certifications",
         skills: "Skills",
         education: "Education",
         experience: "Experience",
         portfolio: "Portfolio",
         location: "Taichung City",
+        certificates: [
+            "Medical Information Manager",
+            "Basic Informatics Nurse",
+            "National Senior Registered Nurse Exam",
+            "RTC iOS App Development"
+        ],
         skillCategories: {
             uiux: "UI/UX Design",
             programming: "Programming",
