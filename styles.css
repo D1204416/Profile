@@ -142,7 +142,7 @@ main {
 }
 
 .indented-text {
-    text-indent: 2em; /* 首行縮排 */
+    /* text-indent: 1em; 首行縮排 */
 }
 
 
