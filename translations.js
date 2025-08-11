@@ -43,13 +43,13 @@ const translations = {
             duties: [
                 "臨床數據彙整，建立數據平台，提高醫療研究與個案管理效率。",
                 "血友病患者個案管理，追蹤治療進展及藥物使用情況。",
-                "血友病患者常規治療 ( IV、IM、draw blood...... )。"
+                "血友病患者常規治療 ( 靜脈注射、肌肉注射、抽血等...... )。"
             ]
         },
         exp2: {
             date: "2016 – 2022",
             company: "送子鳥生殖中心",
-            position: "客戶成功中心主管、教育主管",
+            position: "客戶成功中心主管、內部教練",
             duties: [
                 "負責設計並推動教育方案，協調各項資源",
                 "客戶體驗設計",
@@ -114,7 +114,7 @@ const translations = {
         exp2: {
             date: "2016 – 2022",
             company: "Stork Fertility Center",
-            position: "Customer Success Leader、Chief Learning Officer-CLO",
+            position: "Customer Success Leader、Internal Coach",
             duties: [
                 "Design and implement educational programs, coordinate resources",
                 "Customer experience design",
