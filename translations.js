@@ -21,6 +21,7 @@ const translations = {
         ],
 
         skillCategories: {
+            workflow: "自動化工作流設計",
             uiux: "UI/UX 設計",
             programming: "程式設計",
             frontend: "前端技術",
@@ -86,6 +87,7 @@ const translations = {
             "RTC iOS App Development"
         ],
         skillCategories: {
+            workflow: "Workflow Automation",
             uiux: "UI/UX Design",
             programming: "Programming",
             frontend: "Frontend",
