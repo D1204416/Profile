@@ -1,4 +1,6 @@
-/* Variables */
+/* =========================
+   Base Variables
+========================= */
 :root {
     --primary-color: #20171e;
     --secondary-color: #666;
@@ -13,7 +15,9 @@
     --transition-speed: 0.3s;
 }
 
-/* Reset and base styles */
+/* =========================
+   Reset & Base
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +30,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     padding: 20px;
-
     transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 
 /* 對於可能突變的元素也添加過渡 */
@@ -38,7 +40,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Layout */
+/* =========================
+   Layout
+========================= */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -46,11 +50,9 @@ main {
 }
 
 .resume-container {
-    background: white;
-    /* border-radius: var(--border-radius-top); */
+    background: #fff;
     overflow: hidden;
     display: flex;
-
 }
 
 .left-column {
@@ -73,14 +75,15 @@ main {
     width: 70%;
     padding: 2rem;
     background-color: #fff;
-
 }
 
 .right-column-name {
     padding: 2rem 0;
 }
 
-/* Profile Image */
+/* =========================
+   Profile Image
+========================= */
 .profile-img-container {
     padding-top: 30px;
 }
@@ -106,7 +109,9 @@ main {
     border-radius: 10px !important;
 }
 
-/* Header */
+/* =========================
+   Header
+========================= */
 .header {
     background-color: #fff;
     padding: 2rem;
@@ -132,19 +137,15 @@ main {
     color: var(--primary-color);
 }
 
-/* Navigation Buttons */
+/* =========================
+   Navigation Buttons
+========================= */
 .button-group {
     display: flex;
     gap: 1rem;
-    /* flex-wrap: wrap; */
     justify-content: flex-end;
     margin-right: 2rem;
 }
-
-.indented-text {
-    /* text-indent: 1em; 首行縮排 */
-}
-
 
 .about-me,
 .nav-btn {
@@ -165,8 +166,18 @@ main {
     box-shadow: 0 2px 5px var(--shadow-color);
 }
 
+/* 可鍵盤導覽可見度 */
+.about-me:focus-visible,
+.nav-btn:focus-visible,
+.language-btn:focus-visible,
+.theme-switch input:focus-visible + .slider {
+    outline: 3px solid #4769d0;
+    outline-offset: 2px;
+}
 
-/* Language Switch */
+/* =========================
+   Language Switch
+========================= */
 .language-switch {
     position: absolute;
     top: 20px;
@@ -174,9 +185,7 @@ main {
     z-index: 1000;
     display: flex;
     align-items: center;
-    /* 確保所有元素垂直置中對齊 */
     gap: 1rem;
-    /* 統一間距 */
 }
 
 .language-btn {
@@ -195,7 +204,9 @@ main {
     color: white;
 }
 
-/* Sections */
+/* =========================
+   Sections
+========================= */
 .section {
     margin-bottom: 2.5rem;
 }
@@ -231,7 +242,6 @@ main {
     width: 140px;
     height: 4px;
     background-color: var(--accent-color-light);
-
 }
 
 .section-title-left-license::after {
@@ -242,9 +252,9 @@ main {
     background-color: #7fafde;
 }
 
-
-
-/* Contact Info */
+/* =========================
+   Contact Info
+========================= */
 .contact-info {
     list-style: none;
 }
@@ -271,7 +281,9 @@ main {
     padding-left: 0 !important;
 }
 
-/* Skills */
+/* =========================
+   Skills
+========================= */
 .skills-category {
     margin-bottom: 1.5rem;
 }
@@ -304,7 +316,9 @@ main {
     color: var(--primary-color);
 }
 
-/* Timeline */
+/* =========================
+   Timeline
+========================= */
 .timeline {
     position: relative;
     margin-left: 20px;
@@ -382,7 +396,9 @@ main {
     margin-bottom: 0.3rem;
 }
 
-/* Portfolio */
+/* =========================
+   Portfolio
+========================= */
 .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -403,8 +419,6 @@ main {
 }
 
 .portfolio-item img {
-    /* width: 100%; */
-    /* height: 200px; */
     object-fit: contain;
 }
 
@@ -414,32 +428,20 @@ main {
     color: var(--primary-color);
 }
 
-
-/* 日夜版切換按鈕 */
+/* =========================
+   Theme Switch (Toggle)
+========================= */
 .theme-switch-wrapper {
-    /* display: flex;
-    align-items: center;
-    position: absolute;
-    right: 20px;
-    top: 70px; */
-
     display: flex;
     align-items: center;
 }
 
 .theme-switch {
-    /* display: inline-block;
-    height: 34px;
-    position: relative;
-    width: 80px; */
-
-
     display: inline-block;
     height: 34px;
     position: relative;
     width: 60px;
     margin: 0;
-    /* 移除可能的預設 margin */
 }
 
 .theme-switch input {
@@ -468,11 +470,11 @@ main {
     width: 26px;
 }
 
-input:checked+.slider {
+input:checked + .slider {
     background-color: #4769d0;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     transform: translateX(26px);
 }
 
@@ -485,203 +487,98 @@ input:checked+.slider:before {
 }
 
 .theme-switch-wrapper em {
-    /* margin-left: 10px;
-    font-size: 1rem; */
-
     margin-left: 10px;
     font-size: 0.9rem;
-    /* 與語言按鈕字體大小保持一致 */
     white-space: nowrap;
-    /* 防止文字換行 */
 }
 
 .advantage-title{
     color: #4769d0;
 }
 
-/* Animations */
+/* =========================
+   Animations
+========================= */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
     animation: fadeIn 0.5s ease forwards;
 }
 
-/* Responsive Design */
+/* =========================
+   Responsive Design
+========================= */
 @media (max-width: 968px) {
-    body {
-        padding: 10px;
-    }
-
-    .header {
-        margin-top: 0px;
-        border-radius: 10px;
-    }
-
-    .resume-container {
-        flex-direction: column;
-    }
-
-    .left-column,
-    .right-column {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-
-    .profile-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .name {
-        font-size: 2rem;
-    }
-
-    .button-group {
-        justify-content: center;
-        margin-right: 0;
-    }
-
-    .portfolio {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+    body { padding: 10px; }
+    .header { margin-top: 0px; border-radius: 10px; }
+    .resume-container { flex-direction: column; }
+    .left-column, .right-column { width: 100%; border-radius: 10px; margin-bottom: 20px; }
+    .profile-img { width: 150px; height: 150px; }
+    .name { font-size: 2rem; }
+    .button-group { justify-content: center; margin-right: 0; }
+    .portfolio { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
 }
 
-
 @media (max-width: 480px) {
-    .header {
-        margin-top: 0px;
-    }
-
+    .header { margin-top: 0px; }
     .language-switch {
         position: static;
-        margin: 10px 25px 20px 25px ;
+        margin: 10px 25px 20px 25px;
         display: flex;
         align-items: center;
         gap: 0.5rem;
     }
-
-    .language-btn {
-        width: 100%;
-        max-width: 200px;
-        text-align: center;
-    }
-
-    .left-column{
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-
-    .left-column-center{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .left-column-pro-img{
-        width: 250px;
-        height: 250px;
-        border-radius: 100%;
-    }
-
-    .left-column-pro-info{
-        margin-bottom: 20px;
-    }
-
-    .right-column-name{
-        padding: 0 0 1rem 0;
-    }
-
-    .profile-img-container{
-        padding-top: 20px;
-    }
-
-    .about-me, .nav-btn {
-        padding: 0.3rem 0.5rem;
-    }
-
-    .header {
-        padding: 1rem;
-    }
-
-    .name {
-        font-size: 1.8rem;
-    }
-
-    .title {
-        font-size: 1.1rem;
-    }
-
-    .section-title {
-        font-size: 1.3rem;
-    }
-
-    .timeline {
-        margin-left: 0;
-    }
-
-    .duties {
-        margin-left: 0;
-    }
+    .language-btn { width: 100%; max-width: 200px; text-align: center; }
+    .left-column { margin-right: 0; margin-bottom: 0; }
+    .left-column-center { display: flex; justify-content: center; align-items: center; }
+    .left-column-pro-img { width: 250px; height: 250px; border-radius: 100%; }
+    .left-column-pro-info { margin-bottom: 20px; }
+    .right-column-name { padding: 0 0 1rem 0; }
+    .profile-img-container { padding-top: 20px; }
+    .about-me, .nav-btn { padding: 0.3rem 0.5rem; }
+    .header { padding: 1rem; }
+    .name { font-size: 1.8rem; }
+    .title { font-size: 1.1rem; }
+    .section-title { font-size: 1.3rem; }
+    .timeline { margin-left: 0; }
+    .duties { margin-left: 0; }
 }
 
-/* Print Styles */
+/* =========================
+   Print Styles
+========================= */
 @media print {
-    body {
-        background: white;
-    }
-
-    .resume-container {
-        box-shadow: none;
-        margin: 0;
-        page-break-inside: avoid;
-    }
-
-    .language-switch,
-    .about-me,
-    .nav-btn {
-        display: none;
-    }
-
-    .timeline-item:hover {
-        transform: none;
-    }
-
-    .portfolio-item:hover {
-        transform: none;
-    }
+    body { background: white; }
+    .resume-container { box-shadow: none; margin: 0; page-break-inside: avoid; }
+    .language-switch, .about-me, .nav-btn { display: none; }
+    .timeline-item:hover, .portfolio-item:hover { transform: none; }
 }
 
-/* 只針對Safari 的樣式 */
-@media not all and (min-resolution: 0.001dpcm) { 
+/* =========================
+   Safari-only
+========================= */
+@media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance:none) {
-        a {
-            color: black; /* 特定於 Safari 的樣式 */
-            text-decoration: none;
-        }
+        a { color: black; text-decoration: none; }
     }
 }
 
-/* ========== Dark Theme Overrides ========== */
+/* ============================================================
+   Dark Theme Overrides（高對比、可讀性強）
+   使用：<html data-theme="dark"> 由 JS/偏好設定切換
+============================================================ */
 :root[data-theme="dark"] {
   --accent-color: #9FD2E0;
   --accent-color-light: #cdf1ea;
-  --text-color: #f5f7fb; /* 主體文字改為明亮白 */
-  --primary-color: #ffffff; /* 標題文字亮白 */
-  --secondary-color: #d0d6e0; /* 次要文字亮灰 */
-  --hover-color: #747782;
+  --text-color: #f5f7fb;      /* 主體文字幾近白，強對比 */
+  --primary-color: #ffffff;    /* 標題亮白 */
+  --secondary-color: #d0d6e0;  /* 次要文字亮灰 */
+  --hover-color: #83868f;      /* 亮色 hover 對比 */
   --shadow-color: rgba(0,0,0,0.5);
-  --background-color: #0f1520;
+  --background-color: #0f1520; /* 純色備用背景 */
 }
 
 :root[data-theme="dark"] body {
@@ -691,7 +588,8 @@ input:checked+.slider:before {
 }
 
 :root[data-theme="dark"] .resume-container {
-  background: rgba(30, 30, 30, 0); /* 半透明深灰，讓背景圖不影響可讀性 */
+  /* 加一層半透明深灰，讓背景圖不干擾內容可讀性 */
+  background: rgba(30, 30, 30, 0);
 }
 
 :root[data-theme="dark"] .left-column {
@@ -708,10 +606,7 @@ input:checked+.slider:before {
   color: var(--text-color);
 }
 
-:root[data-theme="dark"] .right-column-name {
-  background-color: transparent;
-}
-
+:root[data-theme="dark"] .right-column-name,
 :root[data-theme="dark"] .header {
   background-color: transparent;
 }
@@ -728,7 +623,7 @@ input:checked+.slider:before {
 }
 
 :root[data-theme="dark"] .section-title::after {
-  background-color: var(--accent-color);
+  background-color: rgba(30, 30, 30, 0.945);
 }
 
 :root[data-theme="dark"] .section-title-left-skill::after {
@@ -742,7 +637,7 @@ input:checked+.slider:before {
 :root[data-theme="dark"] .about-me,
 :root[data-theme="dark"] .nav-btn {
   background: var(--accent-color);
-  color: #000; /* 按鈕文字用深色，確保與亮底對比 */
+  color: #000; /* 亮底配深字，對比更好 */
 }
 
 :root[data-theme="dark"] .about-me:hover,
