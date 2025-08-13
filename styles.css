@@ -27,6 +27,7 @@
 
 body {
     background-color: var(--background-color);
+    background: url('img/white.png') no-repeat center center fixed;
     line-height: 1.6;
     color: var(--text-color);
     padding: 20px;
@@ -50,20 +51,20 @@ main {
 }
 
 .resume-container {
-    background: #fff;
+    background: #ffffff00;
     overflow: hidden;
     display: flex;
 }
 
 .left-column {
     width: 30%;
-    background: linear-gradient(to top, #4c84dc, #a6d0df);
+    background: linear-gradient(to top, #4c84dcb0, #a6d0dfab);
     padding: 2rem;
     margin-right: 20px;
 }
 
 .left-column-pro-img {
-    background: linear-gradient(to bottom, #4c84dc, #a6d0df);
+    background: linear-gradient(to bottom, #4c84dcb0, #a6d0dfab);
     border-radius: var(--border-radius-top);
 }
 
@@ -74,7 +75,7 @@ main {
 .right-column {
     width: 70%;
     padding: 2rem;
-    background-color: #fff;
+    background-color: #ffffff42;
 }
 
 .right-column-name {
@@ -113,7 +114,7 @@ main {
    Header
 ========================= */
 .header {
-    background-color: #fff;
+    background-color: #ffffff42;
     padding: 2rem;
     border-radius: var(--border-radius);
     color: white;
@@ -241,15 +242,15 @@ main {
     left: 0;
     width: 140px;
     height: 4px;
-    background-color: var(--accent-color-light);
+    background-color: #bedde8;
 }
 
 .section-title-left-license::after {
-    background-color: #90bcde;
+    background-color: #b3d1e8;
 }
 
 .section-title-left-skill::after {
-    background-color: #7fafde;
+    background-color: #a7c6e7;
 }
 
 /* =========================
