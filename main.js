@@ -191,41 +191,19 @@ function updateCertificates(t) {
 
 
 // 樣式切換功能
+// === 主題切換（精簡版） ===
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
 
-//檢查本地存儲中的主題設置
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-        switchTheme('styles2.css');
-    }
-}
-
-
-// 切換主題函數
-function switchTheme(cssFile) {
-    let oldlink = document.getElementsByTagName("link").item(0);
-    let newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
-}
+// 初始化：與 boot 腳本一致，保持一致的狀態
+(function initThemeFromStorage() {
+  const currentTheme = localStorage.getItem('theme') || document.documentElement.getAttribute('data-theme') || 'light';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  toggleSwitch.checked = (currentTheme === 'dark');
+})();
 
 // 監聽開關變化
 toggleSwitch.addEventListener('change', function(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        switchTheme('styles2.css');
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        switchTheme('styles.css');
-    }    
+  const theme = e.target.checked ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
 });
-
-
-
