@@ -670,163 +670,141 @@ input:checked + .slider:before {
 
 
 
+/* =========================
+   SWOT 四象限（大圓角 + 漸層 + 膠囊 + 圓形徽章）
+========================= */
+.swot-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1.2rem;
+}
 
+.swot-box{
+  position:relative;
+  border:none;
+  border-radius:28px;
+  padding:1.25rem;
+  box-shadow:0 8px 24px rgba(0,0,0,.06);
+  min-height:220px; /* 依內容可調 */
+}
+
+/* 四象限漸層色（與示意圖接近） */
+.strength{    background:linear-gradient(135deg,#eaf5ff 0%,#c9e7ff 60%); }
+.weakness{    background:linear-gradient(135deg,#f5a26a 0%,#f6df89 100%); }
+.opportunity{ background:linear-gradient(135deg,#fff6e6 0%,#ffe399 70%); }
+.threat{      background:linear-gradient(135deg,#cfe8f0 0%,#e7f4f9 100%); }
+
+/* 角落膠囊標籤 */
+.swot-chip{
+  position:absolute; top:14px; left:18px;
+  display:inline-flex; align-items:center; justify-content:center;
+  height:32px; padding:0 .9rem;
+  font-weight:700; font-size:.9rem;
+  border-radius:999px;
+  background:#6a8eea; color:#fff;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+/* 右上角 chip（Weakness/Threat） */
+.weakness .swot-chip,
+.threat  .swot-chip{ left:auto; right:18px; background:#ffb26e; color:#2b2b2b; }
+/* Opportunities chip 改品牌黃 */
+.opportunity .swot-chip{ background:#f5c042; color:#2b2b2b; }
+/* Threats chip 淡藍灰 */
+.threat .swot-chip{ background:#9ec4d0; color:#1d2b34; }
+
+/* 圓形浮動徽章（S/W/O/T）：縮小 + 外移到格外側 */
+.swot-fab{
+  position:absolute;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:1.25rem;
+  color:#fff;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+  pointer-events:none;  /* 不阻擋點擊 */
+  z-index:1;
+}
+/* 四格角落定位（固定在自己卡片內） */
+.strength   .swot-fab{ right:14px; bottom:14px; background:#4f86ed; }
+.weakness   .swot-fab{ left:14px;  bottom:14px; background:#f96d4d; }
+.opportunity.swot-box .swot-fab{ right:14px; top:14px;  background:#f8b933; color:#1e272e; }
+.threat     .swot-fab{ left:14px;  top:14px;   background:#65a9c9; }
+
+/* 底角的兩格（S/W）預留空間，避免清單壓到圓圈 */
+.strength, .weakness{ padding-bottom:3rem; }
+
+/* 視覺隱藏（保留語意/無障礙） */
+.visually-hidden{
+  position:absolute!important; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
 
 /* =========================
-   SWOT 四象限（排版 + 視覺）
+   SWOT 可展開案例（互動樣式）
 ========================= */
-.swot-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  gap: 1rem;
+.swot-items{ list-style:none; margin:56px 0 0 0; padding:0; } /* 預留 chip 空間 */
+.swot-item + .swot-item{ margin-top:0.5rem; }
+
+.swot-toggle{
+  width:100%;
+  text-align:left;
+  background:#ffffff;
+  border:1px solid #ffffff;
+  border-radius:10px;
+  padding:0.65rem 2.25rem 0.65rem 0.9rem;
+  font-size:1rem;
+  cursor:pointer;
+  position:relative;
+  transition:background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
-
-.swot-box {
-  /* border: 2px solid #cccccc00; */
-  padding: 1rem;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.swot-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.swot-box h5 {
-  margin-bottom: 0.8rem;
-  font-weight: bold;
-  text-align: center;
-  color: #fff;
-  padding: 0.45rem 0.6rem;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-/* 四象限色彩（標題條 + 淺底） */
-.strength { border-color: #4caf50; background-color: rgba(76,175,80,0.08); }
-.weakness { border-color: #f44336; background-color: rgba(244,67,54,0.08); }
-.opportunity { border-color: #2196f3; background-color: rgba(33,150,243,0.08); }
-.threat { border-color: #ff9800; background-color: rgba(255,152,0,0.08); }
-
-.strength h5 { background-color: #4caf50; }
-.weakness h5 { background-color: #f44336; }
-.opportunity h5 { background-color: #2196f3; }
-.threat h5 { background-color: #ff9800; }
-
-/* =========================
-   SWOT 可展開案例（互動）
-========================= */
-.swot-items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.swot-item + .swot-item { margin-top: 0.5rem; }
-
-.swot-toggle {
-  width: 100%;
-  text-align: left;
-  background: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  padding: 0.65rem 2.25rem 0.65rem 0.9rem;
-  /* color: var(--text-color); */
-  font-size: 1rem;
-  cursor: pointer;
-  position: relative;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
 .swot-toggle:hover,
-.swot-toggle:focus {
-  background-color: rgba(255, 255, 255, 0.55);
-  border-color: #ffffff;
-  outline: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+.swot-toggle:focus{
+  background-color:rgba(255,255,255,0.55);
+  border-color:#ffffff;
+  outline:none;
+  box-shadow:0 2px 5px rgba(0,0,0,0.08);
 }
+.swot-toggle::after{
+  content:'\f282'; /* bootstrap-icons chevron-down */
+  font-family:"bootstrap-icons";
+  position:absolute; right:0.6rem; top:50%; transform:translateY(-50%);
+  font-size:1rem; opacity:.7; transition:transform .2s ease;
+}
+.swot-toggle[aria-expanded="true"]::after{ transform:translateY(-50%) rotate(180deg); }
 
-.swot-toggle::after {
-  content: '\f282'; /* bootstrap-icons chevron-down */
-  font-family: "bootstrap-icons";
-  position: absolute;
-  right: 0.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  opacity: 0.7;
-  transition: transform 0.2s ease;
+.swot-content{
+  border-left:4px solid var(--accent-color);
+  margin:.45rem 0 .2rem .1rem;
+  padding:.65rem .75rem;
+  background-color:rgba(0,0,0,0.03);
+  border-radius:6px;
+  font-size:.95rem;
+  line-height:1.55;
+  animation:swotFadeIn .25s ease-in-out;
 }
-
-.swot-toggle[aria-expanded="true"]::after {
-  transform: translateY(-50%) rotate(180deg);
-}
-
-.swot-content {
-  border-left: 4px solid var(--accent-color);
-  margin: 0.45rem 0 0.2rem 0.1rem;
-  padding: 0.65rem 0.75rem;
-  background-color: rgba(0,0,0,0.03);
-  border-radius: 6px;
-  /* color: var(--text-color); */
-  font-size: 0.95rem;
-  line-height: 1.55;
-  animation: swotFadeIn 0.25s ease-in-out;
-}
-
-.swot-content::before {
-  content: "💡";
-  margin-right: 0.4rem;
-}
+.swot-content::before{ content:"💡"; margin-right:.4rem; }
 
 /* 展開動畫 */
-@keyframes swotFadeIn {
-  from { opacity: 0; transform: translateY(-3px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+@keyframes swotFadeIn{ from{opacity:0; transform:translateY(-3px);} to{opacity:1; transform:translateY(0);} }
 
 /* =========================
-   深色模式
+   RWD（小螢幕直條 + 徽章位置調整）
 ========================= */
-/* :root[data-theme="dark"] .swot-box {
-  background-color: rgba(40,40,40,0.6);
-  border-color: rgba(255,255,255,0.15);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
-} */
-
-/* :root[data-theme="dark"] .swot-box:hover {
-  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
-} */
-
-/* :root[data-theme="dark"] .swot-toggle {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.25);
-  color: var(--text-color);
-} */
-
-/* :root[data-theme="dark"] .swot-toggle:hover,
-:root[data-theme="dark"] .swot-toggle:focus {
-  background-color: rgba(255,255,255,0.09);
-  border-color: var(--primary-color);
+@media (max-width:768px){
+  .swot-grid{ grid-template-columns:1fr; gap:1rem; }
+  .swot-box{ padding-bottom:3.2rem; }      /* 所有卡片都預留底部 */
+  .swot-chip{ top:12px; right:16px; left:auto; }
+  .swot-fab{
+    width:42px; height:42px; font-size:1.1rem;
+    right:12px; bottom:14px; left:auto; top:auto; /* 統一右下角 */
+  }
+  .swot-items{ margin-top:52px; }
 }
-
-:root[data-theme="dark"] .swot-content {
-  background-color: rgba(255,255,255,0.06);
-} */
-
-/* 讓標題條在深色模式下更亮一點（維持品牌色相） */
-/* :root[data-theme="dark"] .strength h4 { background-color: #58c863; }
-:root[data-theme="dark"] .weakness h4 { background-color: #ff5c4a; }
-:root[data-theme="dark"] .opportunity h4 { background-color: #3aa1ff; }
-:root[data-theme="dark"] .threat h4 { background-color: #ffa53a; } */
-
-/* =========================
-   RWD（小螢幕直條）
-========================= */
-@media (max-width: 768px) {
-  .swot-grid { grid-template-columns: 1fr; }
+@media (max-width:420px){
+  .swot-box{ padding-bottom:3.2rem; }
+  .swot-fab{ width:42px; height:42px; font-size:1.2rem; right:10px; bottom:14px; }
 }
