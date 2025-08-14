@@ -117,7 +117,7 @@ main {
     background-color: #ffffff42;
     padding: 2rem;
     border-radius: var(--border-radius);
-    color: white;
+    /* color: white; */
     margin-bottom: 1.5rem;
     margin-top: 50px;
 }
@@ -672,7 +672,9 @@ input:checked + .slider:before {
 
 
 
-/* SWOT 四象限排版 */
+/* =========================
+   SWOT 四象限（排版 + 視覺）
+========================= */
 .swot-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -681,39 +683,150 @@ input:checked + .slider:before {
 }
 
 .swot-box {
-  border: 2px solid #ccc;
+  /* border: 2px solid #cccccc00; */
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.swot-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
 .swot-box h4 {
   margin-bottom: 0.8rem;
   font-weight: bold;
   text-align: center;
+  color: #fff;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
 }
 
-.swot-box ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
+/* 四象限色彩（標題條 + 淺底） */
+.strength { border-color: #4caf50; background-color: rgba(76,175,80,0.08); }
+.weakness { border-color: #f44336; background-color: rgba(244,67,54,0.08); }
+.opportunity { border-color: #2196f3; background-color: rgba(33,150,243,0.08); }
+.threat { border-color: #ff9800; background-color: rgba(255,152,0,0.08); }
+
+.strength h4 { background-color: #4caf50; }
+.weakness h4 { background-color: #f44336; }
+.opportunity h4 { background-color: #2196f3; }
+.threat h4 { background-color: #ff9800; }
+
+/* =========================
+   SWOT 可展開案例（互動）
+========================= */
+.swot-items {
+  list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.swot-box li {
-  margin-bottom: 0.5rem;
+.swot-item + .swot-item { margin-top: 0.5rem; }
+
+.swot-toggle {
+  width: 100%;
+  text-align: left;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 0.65rem 2.25rem 0.65rem 0.9rem;
+  /* color: var(--text-color); */
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* 不同象限色彩強調 */
-.strength { border-color: #4caf50; }
-.weakness { border-color: #f44336; }
-.opportunity { border-color: #2196f3; }
-.threat { border-color: #ff9800; }
+.swot-toggle:hover,
+.swot-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.55);
+  border-color: #ffffff;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
 
-/* 小螢幕改直條 */
+.swot-toggle::after {
+  content: '\f282'; /* bootstrap-icons chevron-down */
+  font-family: "bootstrap-icons";
+  position: absolute;
+  right: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.swot-toggle[aria-expanded="true"]::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.swot-content {
+  border-left: 4px solid var(--accent-color);
+  margin: 0.45rem 0 0.2rem 0.1rem;
+  padding: 0.65rem 0.75rem;
+  background-color: rgba(0,0,0,0.03);
+  border-radius: 6px;
+  /* color: var(--text-color); */
+  font-size: 0.95rem;
+  line-height: 1.55;
+  animation: swotFadeIn 0.25s ease-in-out;
+}
+
+.swot-content::before {
+  content: "💡";
+  margin-right: 0.4rem;
+}
+
+/* 展開動畫 */
+@keyframes swotFadeIn {
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   深色模式
+========================= */
+/* :root[data-theme="dark"] .swot-box {
+  background-color: rgba(40,40,40,0.6);
+  border-color: rgba(255,255,255,0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+} */
+
+/* :root[data-theme="dark"] .swot-box:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.45);
+} */
+
+/* :root[data-theme="dark"] .swot-toggle {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.25);
+  color: var(--text-color);
+} */
+
+/* :root[data-theme="dark"] .swot-toggle:hover,
+:root[data-theme="dark"] .swot-toggle:focus {
+  background-color: rgba(255,255,255,0.09);
+  border-color: var(--primary-color);
+}
+
+:root[data-theme="dark"] .swot-content {
+  background-color: rgba(255,255,255,0.06);
+} */
+
+/* 讓標題條在深色模式下更亮一點（維持品牌色相） */
+/* :root[data-theme="dark"] .strength h4 { background-color: #58c863; }
+:root[data-theme="dark"] .weakness h4 { background-color: #ff5c4a; }
+:root[data-theme="dark"] .opportunity h4 { background-color: #3aa1ff; }
+:root[data-theme="dark"] .threat h4 { background-color: #ffa53a; } */
+
+/* =========================
+   RWD（小螢幕直條）
+========================= */
 @media (max-width: 768px) {
-  .swot-grid {
-    grid-template-columns: 1fr;
-  }
+  .swot-grid { grid-template-columns: 1fr; }
 }
-
-
