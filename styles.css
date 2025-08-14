@@ -696,14 +696,14 @@ input:checked + .slider:before {
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.swot-box h4 {
+.swot-box h5 {
   margin-bottom: 0.8rem;
   font-weight: bold;
   text-align: center;
   color: #fff;
   padding: 0.45rem 0.6rem;
   border-radius: 8px;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 /* 四象限色彩（標題條 + 淺底） */
@@ -712,10 +712,10 @@ input:checked + .slider:before {
 .opportunity { border-color: #2196f3; background-color: rgba(33,150,243,0.08); }
 .threat { border-color: #ff9800; background-color: rgba(255,152,0,0.08); }
 
-.strength h4 { background-color: #4caf50; }
-.weakness h4 { background-color: #f44336; }
-.opportunity h4 { background-color: #2196f3; }
-.threat h4 { background-color: #ff9800; }
+.strength h5 { background-color: #4caf50; }
+.weakness h5 { background-color: #f44336; }
+.opportunity h5 { background-color: #2196f3; }
+.threat h5 { background-color: #ff9800; }
 
 /* =========================
    SWOT 可展開案例（互動）
