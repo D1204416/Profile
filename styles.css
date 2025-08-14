@@ -670,3 +670,50 @@ input:checked + .slider:before {
 
 
 
+
+
+/* SWOT 四象限排版 */
+.swot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 1rem;
+}
+
+.swot-box {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.swot-box h4 {
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.swot-box ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.swot-box li {
+  margin-bottom: 0.5rem;
+}
+
+/* 不同象限色彩強調 */
+.strength { border-color: #4caf50; }
+.weakness { border-color: #f44336; }
+.opportunity { border-color: #2196f3; }
+.threat { border-color: #ff9800; }
+
+/* 小螢幕改直條 */
+@media (max-width: 768px) {
+  .swot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+

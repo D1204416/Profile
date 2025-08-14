@@ -72,7 +72,7 @@ const translations = {
         title: "Healthcare & Information Engineering",
         about: "About Me",
         motivation: "Interdisciplinary",
-        advantages: "Strengths",
+        advantages: "SWOT",
         contact: "Contact Info",
         certificatesTitle: "Certifications",
         skills: "Skills",
