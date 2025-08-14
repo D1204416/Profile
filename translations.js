@@ -4,7 +4,7 @@ const translations = {
         title: "醫療照護 x 資訊工程",
         about: "關於我",
         motivation: "跨領域動機",
-        advantages: "我的優勢",
+        advantages: "SWOT",
         contact: "聯絡資訊",
         certificatesTitle: "專業證照",
         skills: "技能",
