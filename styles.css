@@ -729,10 +729,10 @@ input:checked + .slider:before {
   z-index:1;
 }
 /* 四格角落定位（固定在自己卡片內） */
-.strength   .swot-fab{ right:14px; bottom:14px; background:#4f86ed; }
-.weakness   .swot-fab{ left:14px;  bottom:14px; background:#f96d4d; }
-.opportunity.swot-box .swot-fab{ right:14px; top:14px;  background:#f8b933; color:#1e272e; }
-.threat     .swot-fab{ left:14px;  top:14px;   background:#65a9c9; }
+.strength   .swot-fab{ right:-4px; bottom:-8px; background:#4f86ed; }
+.weakness   .swot-fab{ left:-4px;  bottom:-8px; background:#f96d4d; }
+.opportunity.swot-box .swot-fab{ right:-4px; top:-4px;  background:#f8b933; color:#1e272e; }
+.threat     .swot-fab{ left:-4px;  top:-4px;   background:#65a9c9; }
 
 /* 底角的兩格（S/W）預留空間，避免清單壓到圓圈 */
 .strength, .weakness{ padding-bottom:3rem; }
@@ -801,6 +801,7 @@ input:checked + .slider:before {
   .swot-fab{
     width:42px; height:42px; font-size:1.1rem;
     right:12px; bottom:14px; left:auto; top:auto; /* 統一右下角 */
+    display: none;
   }
   .swot-items{ margin-top:52px; }
 }
